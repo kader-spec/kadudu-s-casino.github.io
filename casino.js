@@ -2,15 +2,22 @@ var solde = 100;
 var pertes = 0;
 
 
+function connexion(){
+  var prenom = document.getElementById("prenom").value;
+  document.location.href="casino.html"; 
+  this.prenom2=prenom;
+  alert("Bonjour "+prenom+" nous vous offrons 100 000 FR comme cadeau de bienvenue!! ")
+}
+
 document
 
   .getElementById("input-submit-casino")
   .addEventListener("click", function (event) {
     event.preventDefault();
-
+  
     var perdu = false;
     
-    var pari = document.getElementById("Pair-Impair").value;
+    var pari = document.getElementById("pair-impair").value;
     var mise = parseInt(document.getElementById("mise").value);
     if (solde == 0) {
       alert("Votre porte monnaie est vide");
